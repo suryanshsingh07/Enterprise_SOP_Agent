@@ -124,6 +124,11 @@ To run the full stack, you need both servers running simultaneously.
    - Wait for the backend to parse, chunk, embed, and index the document.
    - Go to the **Chat** interface and ask questions about the uploaded document.
 
+
+<img width="1919" height="795" alt="Screenshot 2026-04-27 170825" src="https://github.com/user-attachments/assets/b148ada1-07c7-4787-a70a-a27eb595ed40" />
+
+
+
 ## Example Queries & Outputs
 
 **Test Case 1 (Information exists in SOP):**
