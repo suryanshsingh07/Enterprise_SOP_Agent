@@ -127,7 +127,11 @@ To run the full stack, you need both servers running simultaneously.
 
 <img width="1919" height="795" alt="Screenshot 2026-04-27 170825" src="https://github.com/user-attachments/assets/b148ada1-07c7-4787-a70a-a27eb595ed40" />
 
+<img width="1919" height="775" alt="Screenshot 2026-04-27 170848" src="https://github.com/user-attachments/assets/cc9ad28c-48eb-4761-aaef-5805354d19de" />
 
+<img width="1919" height="951" alt="Screenshot 2026-04-27 170928" src="https://github.com/user-attachments/assets/63a8f134-5b57-40fd-88dd-a5d2f7dca4df" />
+
+<img width="1919" height="963" alt="Screenshot 2026-04-27 170941" src="https://github.com/user-attachments/assets/a85c79ff-8a8e-41d0-8eea-695cde8d775a" />
 
 ## Example Queries & Outputs
 
@@ -138,3 +142,5 @@ To run the full stack, you need both servers running simultaneously.
 **Test Case 2 (Information does NOT exist in SOP):**
 - *Query:* "What are the company's rules on remote work?"
 - *Output:* "I cannot answer this question because the information is not present in the provided SOPs." *(Zero Hallucination Tolerance)*
+
+<img width="942" height="473" alt="Screenshot 2026-04-27 171124" src="https://github.com/user-attachments/assets/137ec45a-212f-4c04-9869-a1b4a4326e3e" />
