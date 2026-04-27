@@ -1,26 +1,40 @@
-# Enterprise_SOP_Agent
-We are moving beyond simple API calls and designing full-fledged "Cognitive Architectures." This requires careful integration of memory, reasoning, and interaction layers.
+# OpsMind AI
 
-●
-The Brain (LLMs): We must prioritize speed and context window capacity. We will utilize Gemini 1.5 Flash (via Google AI Studio) for its excellent multimodal and reasoning capabilities, or Groq (using Llama 3) for industry-leading inference speed. Both provide high-speed, high-limit free tiers, which are ideal for production simulation and scaling proofs-of-concept.
+A production-ready enterprise context-aware corporate knowledge brain using RAG (Retrieval-Augmented Generation).
 
-●
-The Memory (Vector Database): Crucially, we are avoiding the added complexity and latency of a separate vector database. We will leverage MongoDB Atlas Vector Search. This architecture allows us to keep our core application data (User profiles, chat history) and the AI's long-term memory (semantic Embeddings) in the same document database, drastically reducing latency for Retrieval Augmented Generation (RAG).
+## Features
+- **Zero Hallucination Tolerance**: Strict grounding on provided SOPs.
+- **Mandatory Source Citation**: Clickable references to exact PDF pages.
+- **Scalable Architecture**: Modular Node.js backend and React frontend.
+- **Streaming Responses**: Real-time SSE streaming for chat UX.
 
-●
-The Orchestrator (Backend Logic): LangChain.js or LlamaIndex.TS will be the central nervous system. These libraries manage the intricate "Chain of Thought" logic, seamlessly handling the flow: User Prompt $\rightarrow$ Retrieve Context from MongoDB $\rightarrow$ Send Context + Prompt to LLM $\rightarrow$ Format and Stream Response.
+## Setup Instructions
 
-●
-The Interface (UX): User expectation for AI is instantaneous response. Since LLM responses take time, the React.js interface must implement Server-Sent Events (SSE) to stream the response text token-by-token. This "Typing effect" is mandatory for maintaining user engagement and perceived speed.
+### Prerequisites
+- Node.js (v18+)
+- MongoDB Atlas cluster (with Vector Search capabilities)
+- Google Gemini API Key
 
-●
-Infrastructure Essentials:
+### 1. MongoDB Atlas Configuration
+1. Create a database named `opsmind`.
+2. In the `chunks` collection, create an Atlas Vector Search index named `vector_index` using the JSON provided in `docs/architecture.md`.
 
-○
-Puppeteer: Required for headless browser rendering, specifically for generating pixel-perfect PDFs in the Resume project.
+### 2. Backend Setup
+1. Navigate to `backend` directory.
+2. Run `npm install` (requires Node.js to be installed on your machine).
+3. Update `.env` with your `MONGO_URI` and `GEMINI_API_KEY`.
+4. Run `npm run dev` to start the server on port 5000.
 
-○
-Stripe: The backbone for all SaaS projects, managing complex subscription tiers, payments, and webhooks.
+### 3. Frontend Setup
+1. Navigate to `frontend` directory.
+2. Run `npm install`.
+3. Run `npm run dev` to start the Vite preview on port 5173.
 
-○
-Docker: Mandatory containerization for all projects to ensure environment consistency across development, staging, and production.
+## Example Queries + Outputs
+**Test Case 1 (Found in SOP):**
+- *Query:* "How do I process a refund?"
+- *Output:* "To process a refund, navigate to the billing portal, locate the transaction ID, and click 'Refund'. (Source: Billing_SOP.pdf, Pg 4, Section 2)"
+
+**Test Case 2 (Not in SOP):**
+- *Query:* "What is the CEO's favorite color?"
+- *Output:* "I don't know based on the provided SOPs."
