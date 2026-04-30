@@ -1,18 +1,18 @@
 <div align="center">
   <h1>
-  <img src="https://raw.githubusercontent.com/Prithwish-18/Enterprise_SOP_Agent/opsmind-ai/frontend/public/logo.png" width="30" />
+  <img src="opsmind-ai/frontend/public/logo.png" width="30" />
     Opsmind Ai - Enterprise SOP Knowledge Brain
   <h1>
     <strong>A production-ready, context-aware corporate knowledge brain using Retrieval-Augmented Generation (RAG). OpsMind Ai transforms static standard operating procedures (SOPs) into an interactive, highly accurate AI assistant that strictly relies on approved documentation</strong>
   </p>
-  <!-- <p>
-    <a href="https://opsmind.ai.vercel.app">
+  <p>
+    <a href="https://ai-opsmind.vercel.app">
       <img src="https://img.shields.io/badge/🚀 Live_Demo_vercel-View_Live-green?style=for-the-badge" />
     </a>
-      <a href="https://opsmind.ai.netlify.app">
+      <a href="https://ai-opsmind.netlify.app">
       <img src="https://img.shields.io/badge/🚀 Mirror_netlify-View_Live-green?style=for-the-badge" />
     </a>
-  </p> -->
+  </p>
   <div>
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
     <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />

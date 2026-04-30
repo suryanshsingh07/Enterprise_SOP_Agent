@@ -17,11 +17,11 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://opsmind-ai-backend-rinw.onrender.com',
         changeOrigin: true
       },
       '/uploads': {
-        target: 'http://localhost:5000',
+        target: 'https://opsmind-ai-backend-rinw.onrender.com',
         changeOrigin: true
       }
     }
